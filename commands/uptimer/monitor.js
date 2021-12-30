@@ -6,12 +6,12 @@ module.exports = {
 	name: "monitor",
 	run: async(client, message, args) => {
 		if (!args[0]) {
-      return message.channel.send(client.emotes.error + " **<:DGH_arrow:923191636681428992> Please give website link to monitor**");
+      return message.channel.send(client.emotes.error + " **Please give website link to monitor**");
     }
 
     if (!isURL(args[0])) {
       return message.channel.send(
-        client.emotes.error + " **<:DGH_X_:923191632910745611> Given URL is invalid, Make sure you send working URL**"
+        client.emotes.error + " **Given URL is invalid, Make sure you send working URL**"
       );
     }
 
@@ -22,7 +22,7 @@ module.exports = {
     if (check) {
       if (check.link.length === 5) {
         return message.channel.send(
-          client.emotes.error + " **<:pepeWot:926124046746279966> You reached your limit, you can not add more than 5 website.**",
+          client.emotes.error + " **You reached your limit, you can not add more than 5 website.**",
          );
       }
 
