@@ -20,7 +20,7 @@ module.exports = {
         .setColor(client.embedcolor)
         .setAuthor(`My Uptime`, client.user.displayAvatarURL())
 					.setThumbnail(client.user.displayAvatarURL())
-					.setDescription(`${days} days ${hours} hours ${minutes} minute ${seconds} second`)
+					.setDescription(`${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`)
         
 			.setFooter(client.footer, client.user.displayAvatarURL())
         message.channel.send(upembed)
