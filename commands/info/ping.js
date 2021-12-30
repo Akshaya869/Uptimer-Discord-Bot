@@ -1,6 +1,6 @@
 module.exports = {
 	name: "ping",
 	run: async(client, message, args) => {
-message.channel.send(`**Ping:** \`${client.ws.ping} ms\``)
+message.channel.send(`**<:DGH_backup:923191638480785509> Ping:** \`${client.ws.ping} ms\``)
 }
 }
