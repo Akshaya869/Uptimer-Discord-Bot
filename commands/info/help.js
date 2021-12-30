@@ -6,7 +6,7 @@ aliases: ["h", "cmd"],
 run: async(client, message, args) => {
 	const help = new MessageEmbed()
 	.setAuthor(`help`, client.user.displayAvatarURL())
-	.setDescription(`**This is all my command list**`)
+	.setDescription(`**Command List of <BOTNAME>**`)
 .setThumbnail(client.user.displayAvatarURL())
 		.setColor(client.embedcolor)
 		.addField(`> Info`, '`help`, `ping`, `uptime`')
