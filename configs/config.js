@@ -1,4 +1,4 @@
 module.exports = {
-  prefix: 'up.',
-  embedcolor: '#2f3136'
+  prefix: 'c?',
+  embedcolor: '#00ffff'
 }
