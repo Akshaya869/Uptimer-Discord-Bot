@@ -22,7 +22,7 @@ module.exports = {
     if (check) {
       if (check.link.length === 5) {
         return message.channel.send(
-          client.emotes.error + " **<:pepeWot:621536279758241817> You reached your limit, you can not add more than 5 website.**",
+          client.emotes.error + " **<:pepeWot:926124046746279966> You reached your limit, you can not add more than 5 website.**",
          );
       }
 
