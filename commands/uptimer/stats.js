@@ -13,7 +13,7 @@ run: async(client, message, args) => {
 
     if (!data) {
       return message.channel.send(
-        client.emotes.error + " You do not have any site to monitor, use `up.monitor` too add a website"
+        client.emotes.error + " You do not have any site to monitor, use `c?monitor` too add a website"
       );
     }
 
@@ -28,7 +28,7 @@ run: async(client, message, args) => {
     message.reply(client.emotes.yes+ " **Check Your DM's**");
     message.author.send(embed).catch(err => {
       return message.channel.send(
-        "Your dms are disabled so, please enable to get stats"
+        "<:DGH_error:923191590661554177> Your DMs are Disabled.Please Enable to get Stats"
       );
     });
 }
