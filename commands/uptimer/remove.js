@@ -6,13 +6,13 @@ module.exports = {
 	name: "remove",
 	run: async(client, message, args) => {
 		let database = JSON.parse(fs.readFileSync("./link.json", "utf8"));
-    if (!database) return message.channel.send("Something went wrong...");
+    if (!database) return message.channel.send("<a:DGH_dnd:923191640418582588> Something went wrong...");
 
     let data = database.find(x => x.id === message.author.id);
 
     if (!data) {
       return message.channel.send(
-        client.emotes.error + " You do not have any site to monitor, use `up.monitor` too add a website"
+        client.emotes.error + " <a:DGH_dnd:923191640418582588> You do not have any site to monitor, use `c?monitor` too add a website"
          );
     }
     let value = database.indexOf(data);
@@ -22,7 +22,7 @@ module.exports = {
     });
 
     let embed = new MessageEmbed()
-      .setTitle("Send The number of the link to remove")
+      .setTitle("<a:arrow_right:923190517100073020> Send The number of the link to remove")
       .setColor(client.embedcolor)
       .setDescription(array.join("\n"));
 
@@ -44,13 +44,13 @@ module.exports = {
     if (isNaN(repMsg.content)) {
       msg.delete();
       return message.channel.send(
-        client.emotes.error + " Cancelled The Process of deleting monitor website due to **invalid digit**",
+        client.emotes.error + " <:DGH_error:923191590661554177> Cancelled The Process of deleting monitor website due to **invalid digit**",
         );
     }
 
     if (!database[value].link[parseInt(repMsg.content) - 1]) {
       msg.delete();
-      return message.channel.send(client.emotes.error + " There is no link exist with this number.");
+      return message.channel.send(client.emotes.error + " <:DGH_error:923191590661554177> There is no such link existing with this number.");
     }
 
     if (database[value].link.length === 1) {
