@@ -12,7 +12,7 @@ module.exports = {
 
     if (!data) {
       return message.channel.send(
-        client.emotes.error + " <a:DGH_dnd:923191640418582588> You do not have any site to monitor, use `c?monitor` too add a website"
+        client.emotes.error + " You do not have any site to monitor, use `c?monitor` too add a website"
          );
     }
     let value = database.indexOf(data);
@@ -44,13 +44,13 @@ module.exports = {
     if (isNaN(repMsg.content)) {
       msg.delete();
       return message.channel.send(
-        client.emotes.error + " <:DGH_error:923191590661554177> Cancelled The Process of deleting monitor website due to **invalid digit**",
+        client.emotes.error + " Cancelled The Process of deleting monitor website due to **invalid digit**",
         );
     }
 
     if (!database[value].link[parseInt(repMsg.content) - 1]) {
       msg.delete();
-      return message.channel.send(client.emotes.error + " <:DGH_error:923191590661554177> There is no such link existing with this number.");
+      return message.channel.send(client.emotes.error + " There is no such link existing with this number.");
     }
 
     if (database[value].link.length === 1) {
